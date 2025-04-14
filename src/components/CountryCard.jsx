@@ -12,7 +12,7 @@ function CountryCard({ country }) {
   const altText = `${countryName} Flag`;
 
   return (
-    <div className="country-card">
+    <div className="countryCard">
       {flagUrl ? (
         <img 
           src={flagUrl} 

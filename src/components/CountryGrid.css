@@ -1,0 +1,30 @@
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .country-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .country-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .country-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+  font-size: 1.125rem;
+}

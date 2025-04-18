@@ -1,7 +1,7 @@
 import React from 'react';
 import './CountryCard.css';
 
-function CountryCard({ country }) {
+function CountryCard({ country, onClick }) {
   // Get country name from API response
   const countryName = country.common || 'Unknown Country';
   
@@ -12,7 +12,7 @@ function CountryCard({ country }) {
   const altText = `${countryName} Flag`;
 
   return (
-    <div className="countryCard">
+    <div className="countryCard" onClick={() => onClick(country)}>
       {flagUrl ? (
         <img 
           src={flagUrl} 
@@ -30,6 +30,9 @@ function CountryCard({ country }) {
         </div>
       )}
       <div className="country-name">{countryName}</div>
+      <div className="card-overlay">
+        <span>View Details</span>
+      </div>
     </div>
   );
 }

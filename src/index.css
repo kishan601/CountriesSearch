@@ -1,3 +1,17 @@
+:root {
+  --card-bg: white;
+  --text-color: #2d3748;
+  --heading-color: #2c3e50;
+  --border-color: #f2f2f2;
+  --placeholder-bg: #f7f9fc;
+  --placeholder-color: #a0aec0;
+  --label-color: #4a5568;
+  --value-color: #4a5568;
+  --input-bg: white;
+  --hover-bg: #f7fafc;
+  --icon-color: #718096;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +24,48 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  color: #333;
-  background-color: #f0f2f5;
+  color: var(--text-color);
+  background-color: #f7fafc;
+  background-image: linear-gradient(to bottom, #f7fafc, #edf2f7);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #1a202c;
+  background-image: linear-gradient(to bottom, #1a202c, #171923);
+  color: #e2e8f0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: #4a89dc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--placeholder-bg);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a89dc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a70b2;
 }

@@ -1,0 +1,77 @@
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .toggle-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-track {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    background-color: #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+  }
+  
+  .toggle-input:checked + .toggle-track {
+    background-color: #4a89dc;
+  }
+  
+  .toggle-indicator {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .toggle-input:checked + .toggle-track .toggle-indicator {
+    transform: translateX(26px);
+  }
+  
+  .toggle-icon {
+    color: #4a5568;
+    transition: color 0.2s;
+  }
+  
+  .toggle-input:checked + .toggle-track .toggle-icon {
+    color: #4a89dc;
+  }
+  
+  .toggle-text {
+    margin-left: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-color, #4a5568);
+  }
+  
+  @media (max-width: 640px) {
+    .theme-toggle {
+      position: static;
+      margin-bottom: 1rem;
+      justify-content: flex-end;
+    }
+  }

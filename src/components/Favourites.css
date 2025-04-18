@@ -1,0 +1,90 @@
+.favorites-container {
+    margin-bottom: 2rem;
+    background-color: var(--card-bg, white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .favorites-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(90deg, #4a89dc, #5d9cec);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .favorites-count {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .favorites-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .favorite-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid var(--border-color, #f2f2f2);
+    transition: background-color 0.2s;
+  }
+  
+  .favorite-item:last-child {
+    border-bottom: none;
+  }
+  
+  .favorite-item:hover {
+    background-color: var(--hover-bg, #f7fafc);
+  }
+  
+  .favorite-flag {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-right: 1rem;
+  }
+  
+  .favorite-name {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--text-color, #4a5568);
+  }
+  
+  .favorite-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .favorite-view,
+  .favorite-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--icon-color, #718096);
+  }
+  
+  .favorite-view:hover {
+    background-color: rgba(74, 137, 220, 0.1);
+    color: #4a89dc;
+  }
+  
+  .favorite-remove:hover {
+    background-color: rgba(229, 62, 62, 0.1);
+    color: #e53e3e;
+  }
